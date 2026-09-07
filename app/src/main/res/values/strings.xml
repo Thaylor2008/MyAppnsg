@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">My App nsg</string>
     <string name="app_title">MEU CURSO</string>
     <string name="app_subtitle">Gerencie suas disciplinas, simule notas e evite o jubilamento de forma simples e prática.</string>
     <string name="card_title">Crie sua Conta Acadêmica</string>
