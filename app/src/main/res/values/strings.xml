@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_title">MEU CURSO</string>
+    <string name="app_subtitle">Gerencie suas disciplinas, simule notas e evite o jubilamento de forma simples e prática.</string>
+    <string name="card_title">Crie sua Conta Acadêmica</string>
+    <string name="label_nome_completo">NOME COMPLETO</string>
+    <string name="hint_nome_exemplo">Ex: Ana Silva</string>
+    <string name="label_matricula">MATRÍCULA</string>
+    <string name="hint_matricula_exemplo">Ex: 2022019482</string>
+    <string name="label_curso">CURSO</string>
+    <string name="hint_curso_exemplo">Ex: Ciência da Computação</string>
+    <string name="btn_salvar_comecar">Salvar e Começar</string>
+    <string name="footer_ufmg">Desenvolvido de forma independente para estudantes da UFMG.</string>
+    <string name="salvar_e_come_ar">Salvar e Começar</string>
+    <string name="meu_curso">MEU CURSO</string>
+    <string name="gerencie_suas_disciplinas_simule_notas_e_evite_o_jubilamento_de_forma_simples_e_pr_tica">Gerencie suas disciplinas, simule notas e evite o jubilamento de forma simples e prática.</string>
+    <string name="crie_sua_conta_acad_mica">Crie sua Conta Acadêmica</string>
+    <string name="nome_completo">NOME COMPLETO</string>
+    <string name="ex_ana_silva">Ex: Ana Silva</string>
+    <string name="matr_cula">MATRÍCULA</string>
+    <string name="ex_2022019482">Ex: 2022019482</string>
+    <string name="curso">CURSO</string>
+    <string name="ex_ci_ncia_da_computa_o">Ex: Ciência da Computação</string>
+    <string name="desenvolvido_de_forma_independente_por_um_estudante_da_ufmg">Desenvolvido de forma independente para estudantes da UFMG.</string>
+</resources>
