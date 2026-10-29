@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_panel"
+        android:title="Painel" />
+    <item
+        android:id="@+id/nav_grade"
+        android:icon="@drawable/ic_grade"
+        android:title="Grade" />
+    <item
+        android:id="@+id/nav_tarefas"
+        android:icon="@drawable/ic_tasks"
+        android:title="Tarefas" />
+    <item
+        android:id="@+id/nav_desempenho"
+        android:icon="@drawable/ic_analytics"
+        android:title="Desempenho" />
+    <item
+        android:id="@+id/nav_ajustes"
+        android:icon="@drawable/ic_settings"
+        android:title="Ajustes" />
+</menu>

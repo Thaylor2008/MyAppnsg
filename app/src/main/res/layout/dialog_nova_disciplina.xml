@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp">
+
+        <!-- Nome da Disciplina -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutNomeDisciplina"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome da Disciplina (ex: PDS 2)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNomeDisciplina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Código da Disciplina -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutCodigoDisciplina"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Código (ex: DCC204)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCodigoDisciplina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Créditos -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutCreditos"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Créditos (ex: 4)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCreditos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Carga Horária -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutCargaHoraria"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Carga Horária (ex: 60)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCargaHoraria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Nota Consolidada -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutNotaConsolidada"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Nota Consolidada (ex: 85.0)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNotaConsolidada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Semestre -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutSemestre"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Semestre (ex: 2024/1)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSemestre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+</ScrollView>

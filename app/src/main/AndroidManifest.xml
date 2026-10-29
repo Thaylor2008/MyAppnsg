@@ -21,6 +21,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PageHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GradeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TarefasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DesempenhoMacroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AjustesActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
