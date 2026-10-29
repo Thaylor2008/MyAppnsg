@@ -3,5 +3,21 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#1D458A</color>
+    <color name="blue_primary">#1D3C8A</color>
+    <color name="blue_accent">#2563EB</color>
+    <color name="blue_light">#E8F0FE</color>
+    <color name="blue_bg_icon">#EFF6FF</color>
     <color name="greysub">#4B5563</color>
+    <color name="bg_app">#F4F6F9</color>
+    <color name="text_dark">#0F172A</color>
+    <color name="text_muted">#64748B</color>
+    <color name="green_success">#10B981</color>
+    <color name="green_light">#ECFDF5</color>
+    <color name="orange_warning">#D97706</color>
+    <color name="yellow_card_bg">#FFFBEB</color>
+    <color name="yellow_card_stroke">#FDE68A</color>
+    <color name="yellow_icon_bg">#F59E0B</color>
+    <color name="red_danger">#DC2626</color>
+    <color name="nav_inactive">#94A3B8</color>
+    <color name="progress_track">#E2E8F0</color>
 </resources>

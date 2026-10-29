@@ -22,4 +22,45 @@
     <string name="curso">CURSO</string>
     <string name="ex_ci_ncia_da_computa_o">Ex: Ciência da Computação</string>
     <string name="desenvolvido_de_forma_independente_por_um_estudante_da_ufmg">Desenvolvido de forma independente para estudantes da UFMG.</string>
+
+    <!-- Page Home Strings -->
+    <string name="semestre_atual">Semestre Atual • 2024/2</string>
+    <string name="nome_usuario">Ana Silva</string>
+    <string name="curso_usuario">Ciência da Computação</string>
+    <string name="avatar_initials">AS</string>
+    <string name="progresso_academico">Progresso Acadêmico</string>
+    <string name="nsg_val">NSG: 84.5</string>
+    <string name="horas_integralizadas">3.210h</string>
+    <string name="integralizado">Integralizado</string>
+    <string name="creditos_obtidos">214 cr.</string>
+    <string name="meta_creditos">Meta: 240</string>
+    <string name="status_jubilamento_title">Status de Jubilamento: Seguro</string>
+    <string name="status_jubilamento_desc">Você não possui semestres com NSG zero ou infrações graves.</string>
+    <string name="disciplinas_matriculadas">Disciplinas Matriculadas</string>
+
+    <!-- Subject 1 -->
+    <string name="code_pds2">DCC003</string>
+    <string name="title_pds2">PDS 2</string>
+    <string name="score_pds2">45/100 pts</string>
+    <string name="info_pds2">4 créditos • Práticas</string>
+    <string name="status_pds2">Faltam 15 pts para aprovar</string>
+
+    <!-- Subject 2 -->
+    <string name="code_probabilidade">EST031</string>
+    <string name="title_probabilidade">Probabilidade</string>
+    <string name="score_probabilidade">62/100 pts</string>
+    <string name="info_probabilidade">4 créditos • Teórica</string>
+    <string name="status_probabilidade">Aprovado!</string>
+
+    <!-- Subject 3 -->
+    <string name="code_algebra">MAT038</string>
+    <string name="title_algebra">Álgebra Linear</string>
+    <string name="score_algebra">28/100 pts</string>
+    <string name="info_algebra">4 créditos • Teórica</string>
+    <string name="status_algebra">Abaixo da média</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_painel">Painel</string>
+    <string name="nav_grade">Grade</string>
+    <string name="nav_ajustes">Ajustes</string>
 </resources>
