@@ -1,6 +1,7 @@
 package com.example.myappnsg
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
@@ -25,6 +26,7 @@ class PageHomeActivity : AppCompatActivity() {
         setContentView(R.layout.pagehome)
 
         // 1. Mapear os elementos do cabeçalho
+        val tvSemestre = findViewById<TextView>(R.id.tvSemestre)
         val tvNomeUsuario = findViewById<TextView>(R.id.tvNomeUsuario)
         val tvCursoUsuario = findViewById<TextView>(R.id.tvCursoUsuario)
         val tvAvatar = findViewById<TextView>(R.id.tvAvatar)
@@ -35,12 +37,18 @@ class PageHomeActivity : AppCompatActivity() {
         val cursoSalvo = sharedPreferences.getString("USER_CURSO", "Ciência da Computação") ?: "Ciência da Computação"
 
         // 3. Atualizar as informações na tela
-        tvNomeUsuario.text = nomeSalvo
-        tvCursoUsuario.text = cursoSalvo
-        tvAvatar.text = extrairIniciais(nomeSalvo)
+        tvSemestre?.text = "Semestre Atual • 2026/2"
+        tvNomeUsuario?.text = nomeSalvo
+        tvCursoUsuario?.text = cursoSalvo
+        tvAvatar?.text = extrairIniciais(nomeSalvo)
 
         // 4. Configurar RecyclerView de disciplinas
         val rvDisciplinas = findViewById<RecyclerView>(R.id.rvDisciplinas)
+        disciplinaAdapter.onItemClick = { disciplina ->
+            val intent = Intent(this, DetalheDisciplinaActivity::class.java)
+            intent.putExtra("DISCIPLINA_ID", disciplina.id)
+            startActivity(intent)
+        }
         rvDisciplinas?.adapter = disciplinaAdapter
 
         // 5. Carregar as disciplinas do Room Database
@@ -54,6 +62,11 @@ class PageHomeActivity : AppCompatActivity() {
 
         // 7. Configurar navegação inferior
         setupBottomNav(R.id.nav_home)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        carregarDisciplinas()
     }
 
     private fun setupBottomNav(currentItemId: Int) {
@@ -82,8 +95,31 @@ class PageHomeActivity : AppCompatActivity() {
         lifecycleScope.launch(Dispatchers.IO) {
             val db = AppDatabase.getDatabase(this@PageHomeActivity)
             val lista = db.disciplinaDao().listarTodas()
+
+            // Cálculo do NSG Acumulado (Média ponderada por créditos)
+            val totalCreditos = lista.sumOf { it.creditos }
+            val nsg = if (lista.isNotEmpty() && totalCreditos > 0) {
+                lista.sumOf { it.notaConsolidada * it.creditos } / totalCreditos
+            } else if (lista.isNotEmpty()) {
+                lista.map { it.notaConsolidada }.average()
+            } else {
+                0.0
+            }
+
             withContext(Dispatchers.Main) {
                 disciplinaAdapter.atualizarLista(lista)
+
+                val tvNsgValor = findViewById<TextView>(R.id.tvNsgValor)
+                tvNsgValor?.text = String.format("%.1f", nsg)
+
+                // Lógica da Cor Dinâmica do NSG:
+                // - Se nsg < 50.0 -> Vermelho (#E53935)
+                // - Se nsg >= 50.0 -> Verde (#4CAF50)
+                if (nsg < 50.0) {
+                    tvNsgValor?.setTextColor(Color.parseColor("#E53935"))
+                } else {
+                    tvNsgValor?.setTextColor(Color.parseColor("#4CAF50"))
+                }
             }
         }
     }

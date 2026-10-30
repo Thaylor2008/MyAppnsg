@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp">
+
+        <CheckBox
+            android:id="@+id/cbConcluida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNomeAvaliacao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/text_dark"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvNotaAvaliacao"
+            app:layout_constraintStart_toEndOf="@id/cbConcluida"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Prova 1 (Seções 1 e 2)" />
+
+        <TextView
+            android:id="@+id/tvNotaAvaliacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="22.5 / 30.0 pts" />
+
+        <TextView
+            android:id="@+id/tvDataAvaliacao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/text_muted"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@id/btnEditarAvaliacao"
+            app:layout_constraintStart_toEndOf="@id/cbConcluida"
+            app:layout_constraintTop_toBottomOf="@id/tvNomeAvaliacao"
+            tools:text="Data: 12 Set • Valor: 30 pts" />
+
+        <TextView
+            android:id="@+id/tvStatusTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/cbConcluida"
+            app:layout_constraintTop_toBottomOf="@id/tvDataAvaliacao"
+            tools:text="Concluída" />
+
+        <ImageView
+            android:id="@+id/btnDeletarAvaliacao"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNotaAvaliacao"
+            app:tint="@color/red_danger"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/btnEditarAvaliacao"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="12dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnDeletarAvaliacao"
+            app:layout_constraintTop_toBottomOf="@id/tvNotaAvaliacao"
+            app:tint="@color/blue_primary"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -36,6 +36,9 @@
         <activity
             android:name=".AjustesActivity"
             android:exported="false" />
+        <activity
+            android:name=".DetalheDisciplinaActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

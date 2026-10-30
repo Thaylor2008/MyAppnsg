@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.progressindicator.LinearProgressIndicator
 
 class DisciplinaAdapter(
-    private var listaDisciplinas: List<Disciplina> = emptyList()
+    private var listaDisciplinas: List<Disciplina> = emptyList(),
+    var onItemClick: ((Disciplina) -> Unit)? = null
 ) : RecyclerView.Adapter<DisciplinaAdapter.DisciplinaViewHolder>() {
 
     fun atualizarLista(novaLista: List<Disciplina>) {
@@ -23,7 +24,11 @@ class DisciplinaAdapter(
     }
 
     override fun onBindViewHolder(holder: DisciplinaViewHolder, position: Int) {
-        holder.bind(listaDisciplinas[position])
+        val item = listaDisciplinas[position]
+        holder.bind(item)
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(item)
+        }
     }
 
     override fun getItemCount(): Int = listaDisciplinas.size
